@@ -1,0 +1,2 @@
+hn='hostname'
+echo "i'am on $hn"
