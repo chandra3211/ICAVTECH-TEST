@@ -1,0 +1,21 @@
+#to build the image from Dockerfile
+docker build -t tomcat-app:latest .
+
+#Run docker images to verify iamges are created.
+
+docker images
+
+#Authenticate to your default registry
+
+aws ecr get-login-password --region us-east-1| docker login --username chandracool.1989@gmail.com --password-stdin chandracool.1989@gmail.com.dkr.ecr.us-east-1.amazonaws.com
+
+#create a repository
+
+aws ecr create-repository \
+    --repository-name tomcat
+    --image-scanning-configuration scanOnPush=true \
+    --region us-east-1
+    
+#push an image to amazon ECR
+
+docker push chandracool.1989@gmail.com.dkr.ecr.us-east-1.amazonaws.com/tomcat-app:latest
