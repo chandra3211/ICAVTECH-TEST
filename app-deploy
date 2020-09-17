@@ -1,0 +1,62 @@
+#Pipeline to deploy the app to AWS EKS
+
+#create a namespace
+kubectl create namespace dev
+
+# create deployment object to deploy app
+vim test_deploy.yml
+
+apiversion: apps/v1
+kind: Deployment
+metadata: 
+   name: my-app
+   namespace: Dev
+   labels:
+     app: my-dev
+spec:
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: my-dev
+    spec:
+      containers
+       -name: nginx
+        image: chandra/nginx:1.7.0
+      ports
+       -protocal: tcp
+        containerports: 8080
+---        
+#create service object
+apiversion: apps/v1
+kind: service
+metadata: 
+   name: my-service
+   labels:
+     app: my-dev
+spec:
+  type: loadbalancer
+  selector:
+    app: my-dev
+  ports:
+   port: 80
+   targetport: 8080
+   
+   
+#Deploy the app
+
+kubectl apply -f test_deploy.yaml  
+
+#to view all deployed services
+
+kubectl describe service my-service
+
+#to view all pods
+
+kubectl get pods
+
+
+ 
+     
+
+
