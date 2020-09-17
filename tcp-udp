@@ -1,0 +1,21 @@
+Q4.What TCP and UDP vulnerabilities are you familiar with?
+
+1.Predicting TCP Sequences:
+With some diligent application of the right kind of algorithms, it’s possible for an attacker to guess the sequence of numbers that TCP assigns to a stream of data packets. Knowing the next number in a transmission sequence, an attacker may potentially “step in” to an ongoing communication and pose as the originator of the message.
+2.TCP Blind Spoofing:
+Here, an attacker is able to guess both the sequence number of an ongoing communication session and its port number. They are then in a position to carry out an injection attack, inserting corrupted or fraudulent data into the stream – or worse, malicious code or malware.
+
+3.Session Hijacking:
+Using a packet sniffer (a tool for detecting the presence and movement of data packets), an attacker may capture data packets and gain full access to an HTTP session. If there’s weak authentication between a web server and its clients, the attacker may assume full control of the client’s rights, switching the communication to one directly between them and the targeted server.
+
+4.Web Application and Browser Security Weaknesses
+Typically, a web browser will create a cache of the sites you’ve visited, consisting of a portion of your hard drive where data from various pages (including images, passwords, and credentials) is stored for easy access. If a device becomes compromised, a hacker may gain access to this cache and your confidential data without the need for authentication on their part.
+
+5.Cookie Poisoning
+Many web applications and resources use cookies to store your credentials and activity histories so that you don’t have to log into them on repeat visits. These are stored on your machine and may be modified (poisoned) or stolen by an attacker who may use cookies containing your login details to gain access to web sites from their own system
+
+6.Replay Attacks
+In this specialized form of man-in-the-middle attack, a hacker may spoof the IP address of a client, redirect their machine, and send the same data repeatedly to a targeted server. This replayed data may also be modified or corrupted prior to its repeat sending.
+
+7.DNS Protocol Attacks
+Assaults on the Domain Name System (DNS, which resolves alpha-numeric IP addresses with more recognizable host domain names like MyWebsite.com) allow attackers to modify DNS records so that they misdirect traffic to incorrect or spoofed IP addresses.

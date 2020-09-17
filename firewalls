@@ -1,0 +1,18 @@
+Q6.What types of firewalls are there?
+
+The term ‘Firewall’ comes from a metaphor thought up from AT&T pioneer Steven M.Bellovin. He described a firewall as a ‘wall on fire’ that would prevent intruders like viruses, trojans, ransomware and other malicious things from coming into your network and infecting them.
+
+1.Packet Filtering Firewall
+The first type of Firewall created for network security. This Firewall was designed to filter and inspect data packets entering the network based on an established set of rules. These rules are input by the system but can be added to or changed by the user. Potential variations could be allowing certain IP addresses, packet types or port numbers or potentially blocking them.
+ 
+2. Circuit Level Firewall or Gateway
+These are more detailed Firewalls, observing TCP (transmission control protocol) connections and sessions. They are in place is to ensure any external sessions your network encounters, are safe and legitimate ones. Again, alerting the user or blocking the potential danger.
+
+3. Stateful Inspection Firewall
+A combination of Packet filtering and circuit level Firewalls. These Firewalls monitor all active sessions or connections, giving them the most power in evaluating whether networks packets should be permitted or blocked.
+
+4. Application-level gateways
+This kind of Firewall is also known as a proxy Firewall. Where this combines the features of packet filtering firewalls with those of circuit level gateways. Meaning that they filter packets not only for the service for which they are used.
+
+5. Next-gen firewalls
+Finally, the most advanced and most recent development of Firewall is Next-gen Firewalls. A typical next-gen product combines packet inspection with stateful inspection. Some next-gen models also provide a variety of deep packet inspection.
