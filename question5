@@ -1,0 +1,15 @@
+A branch represents an independent line of development. Branches serve as an abstraction for the edit/stage/commit process. The git branch command lets you create, list, rename, and delete branches. It doesn’t let you switch between branches or put a forked history back together again. 
+
+List of below commands in Branch:
+
+1. to list all of the branches 
+
+git branch
+
+2. Delete the specified branch.
+
+git branch -d
+
+3. List all remote branches. 
+
+git branch -a
