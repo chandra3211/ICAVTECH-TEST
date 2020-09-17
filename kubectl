@@ -1,0 +1,21 @@
+#fowllowing Steps to setup KubeCtl on AWS EKS
+
+#download kubectl binary for amazon Eks
+
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl
+
+#apply execute permission to kubectl
+
+chmod +x ./kubectl
+
+#copy binary file to bin directory
+
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+
+#Add the $HOME/bin path to your bashrc
+
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+
+#After you install kubectl , you can verify its version with the following command: 
+
+kubectl version --short --client
