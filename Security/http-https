@@ -1,3 +1,5 @@
+Q3. How HTTPS different from HTTP?
+
     HTTP lacks security mechanism to encrypt the data whereas HTTPS provides SSL or TLS Digital Certificate to secure the communication between server and client.
     HTTP operates at Application Layer whereas HTTPS operates at Transport Layer.
     HTTP by default operates on port 80 whereas HTTPS by default operates on port 443.
